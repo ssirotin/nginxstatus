@@ -13,7 +13,7 @@ BGBLUE='\033[44m'
 nginxstatus=$(systemctl status nginx | grep -Eo "running|failed|dead")
 if [[ $nginxstatus == "running" ]]
   then
-	  echo -en "${WHITE} ${BGGREEN} web server NGINX is running $(curl -sI 192.168.0.13 | head -n 1 | cut -d $" " -f 2,3,4,5,6) ${NORMAL}\n"
+    echo -en "${WHITE} ${BGGREEN} web server NGINX is running $(curl -sI 192.168.0.13 | head -n 1 | cut -d $" " -f 2,3,4,5,6) ${NORMAL}\n"
   else
     echo -en "${WHITE} ${BGRED} web server NGINX not running $(curl -sI 192.168.0.13 | head -n 1 | cut -d $" " -f 2,3,4,5,6) ${NORMAL}\n"
     systemctl restart nginx
