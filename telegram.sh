@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-CHAT_ID="напиши свое" # id чата куда отправляем
+CHAT_ID="$CHATID" # id чата куда отправляем
 TEXT="$1" # текст который отправляем
-BOT_AUTH_TOKEN="напиши свое" # Токен бота
+BOT_AUTH_TOKEN="$BOTTOKEN" # Токен бота
 
 # -s, --silent        Silent mode (тихий режим)
 # -S, --show-error    Show error even when -s is used (показывать ошибки даже в тихом режиме)
